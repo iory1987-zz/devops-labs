@@ -1,0 +1,8 @@
+flask
+hvac
+pika
+pymongo
+gunicorn
+flask-cors
+python-consul
+flask-restplus

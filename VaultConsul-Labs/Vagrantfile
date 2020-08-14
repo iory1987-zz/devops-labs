@@ -1,0 +1,20 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+    config.vm.box = "centos/7"
+    config.vm.hostname = "Devops-Labs"
+    config.vm.box_check_update = false
+    config.vm.provision "shell", path: "scripts/docker.sh"
+    config.vm.network "forwarded_port", guest: 8200,  host: 8200
+    config.vm.network "forwarded_port", guest: 8500,  host: 8500
+    config.vm.network "forwarded_port", guest: 8080,  host: 8080
+    config.vm.network "forwarded_port", guest: 27017, host: 27017
+    config.vm.network "forwarded_port", guest: 5672,  host: 5672
+    config.vm.network "forwarded_port", guest: 15672,  host: 15672
+
+    config.vm.provider "virtualbox" do |vb|
+       vb.memory = "512"
+       vb.cpus = "1"
+    end
+  end

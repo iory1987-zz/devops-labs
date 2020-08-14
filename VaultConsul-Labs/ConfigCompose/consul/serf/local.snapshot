@@ -1,0 +1,9 @@
+alive: 172.21.0.2 172.21.0.2:8301
+clock: 1
+event-clock: 1
+alive: 172.17.0.2 172.17.0.2:8301
+clock: 2
+event-clock: 2
+alive: 172.18.0.4 172.18.0.4:8301
+clock: 3
+event-clock: 3
