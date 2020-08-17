@@ -39,7 +39,12 @@ docker_install(){
 
     sysctl -p
 
-    pip3 install -r /vagrant/appV1/requirements.txt
+    cd /vagrant
+
+    pip3 install -r appV1/requirements.txt
+
+
+    docker-compose up -d
 }
 
 if [ -f /etc/redhat-release ]; then
